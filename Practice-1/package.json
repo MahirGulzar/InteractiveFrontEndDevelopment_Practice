@@ -6,6 +6,10 @@
   "author": "Urmas Talimaa",
   "license": "MIT",
   "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",

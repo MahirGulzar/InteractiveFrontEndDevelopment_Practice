@@ -1,11 +1,15 @@
-import Robot from './Robot';
-import {associate} from './PureFunctions';
+import Counter from './Counter';
 
-const robot = new Robot();
-robot.beep();
 
-document.body.innerHTML = '<h1>Title added from JavaScript</h1>';
+const counter = new Counter();
 
-console.log(associate('fooz', 'baz', {foo: 'bar'})); // eslint-disable-line no-console
-
-window.robot = robot;
+let button = document.createElement('button');
+button.innerHTML = 'Clicked ' + counter.getCount+' Times';
+button.onclick = function() {
+    counter.increase();
+    button.innerHTML = 'Clicked ' + counter.getCount + ' Times';
+};
+// where do we want to have the button to appear?
+// you can append it to another element just by doing something like
+// document.getElementById('foobutton').appendChild(button);
+document.body.appendChild(button);
