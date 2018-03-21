@@ -1,2 +1,16 @@
 @import 'general.css';
 @import 'headers.css';
+
+
+.myButton {
+    width: 500px;
+    height: 100px;
+    font-size:x-large;
+    position: absolute;
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "plugins": ["import"],
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  rules: {
+    "max-len": ["error", 120],
+    "require-jsdoc": "off",
+    "comma-dangle": "off",
+    "space-before-function-paren": "off",
+    "semi": "off",
+    "no-trailing-spaces": "off",
+    "padded-blocks": "off",
+    "no-undef": "off",
+
+	"linebreak-style": 0
+  }
+}
