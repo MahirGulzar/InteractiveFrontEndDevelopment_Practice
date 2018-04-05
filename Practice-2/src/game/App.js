@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import GameLogic from './GameLogic';
-import { OUTCOME } from './GameLogic';
+import GameLogic, {OUTCOME} from './GameLogic';
 
 import MoveList from './MoveList';
 import UserInput from './UserInput';
@@ -22,21 +21,19 @@ class App extends Component {
         };
     }
 
-    //Handle user Move
-    handleEnter({ userMove }) {
-        //call gameLogic
+    // Handle user Move
+    handleEnter({userMove}) {
+        // call gameLogic
         this.setState({
             showPrevious: true
         });
         let compMove = this.gameLogic.getName(this.gameLogic.nextMove());
         let result = OUTCOME.LOST;
-        result = this.gameLogic.checkMove(userMove)
-        userMove = this.gameLogic.getName(userMove)
-        
+        result = this.gameLogic.checkMove(userMove);
+        userMove = this.gameLogic.getName(userMove);
         let output = 'You guessed ' + userMove + ' which ' + result + ' with ' + compMove;
         let cType;
-        switch (result)
-        {
+        switch (result) {
             case OUTCOME.WON:
                 cType = 'won';
                 this.setState({
@@ -54,14 +51,11 @@ class App extends Component {
                 break;
         }
         this.setState({
-            moves: this.state.moves.concat({ text: output, classType: cType, id: this.gameLogic.movesCounter })
+            moves: this.state.moves.concat({text: output, classType: cType, id: this.gameLogic.movesCounter})
         });
-
-        
     }
-
     render() {
-        const styleType = this.state.showPrevious ? {} : { display: 'none' };
+        const styleType = this.state.showPrevious ? {} : {display: 'none'};
         return (
             <div className='app'>
                 <h1>Game Lobby</h1>
@@ -70,10 +64,8 @@ class App extends Component {
                 <UserInput onEnter={this.handleEnter.bind(this)} isHidden={this.state.hideInput} />
                 <p style={styleType}> Previous Moves:</p>
                 <MoveList moves={this.state.moves} />
-                  
             </div>
         );
     }
 }
-
 export default App;

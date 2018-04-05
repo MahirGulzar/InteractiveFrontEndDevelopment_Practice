@@ -11,14 +11,10 @@
     "plugin:import/warnings"
   ],
   rules: {
-    "max-len": ["error", 120],
+    "max-len": ["error", 150],
     "require-jsdoc": "off",
     "comma-dangle": "off",
-    "space-before-function-paren": "off",
-    "semi": "off",
-    "no-trailing-spaces": "off",
-    "padded-blocks": "off",
-    "no-undef": "off",
+    "no-undef": "warn",
 
 	"linebreak-style": 0
   }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Move from './Move';
 
 /*
-
+    MoveList pure-function holds the list of moves i.e maps every move to <Move>
 */
 const MoveList = (props) => {
   const moveElements = props.moves.map((move) => {
@@ -17,14 +17,12 @@ const MoveList = (props) => {
     </div>
   );
 };
-
-//CommentList.propTypes = {
-//  comments: PropTypes.arrayOf(PropTypes.shape({
-//    text: PropTypes.string,
-//    classType: PropTypes.string,
-//    id: PropTypes.number
-
-//  })).isRequired
-//};
+MoveList.propTypes = {
+  moves: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string,
+    classType: PropTypes.string,
+    id: PropTypes.number
+    }))
+};
 
 export default MoveList;

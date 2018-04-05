@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 /*
-  
+  UserInput handles all the inputs from users and performs related actions and checks
 */
 class UserInput extends Component {
   constructor(props) {
@@ -11,25 +11,21 @@ class UserInput extends Component {
         userMove: ''
     };
   }
-
   handleMoveChange(event) {
-
       let eventVal = event.target.value.toUpperCase();
-      if (eventVal =='R' || eventVal == 'P' || eventVal == 'S')
-          this.setState({ userMove: eventVal });
-  }
-
-  onEnter(e) {
-      if (e.key == 'Enter' && this.state.userMove !='') {
-          this.props.onEnter({ userMove: this.state.userMove });
-          this.setState({ userMove:""})
+      if (eventVal == 'R' || eventVal == 'P' || eventVal == 'S') {
+          this.setState({userMove: eventVal});
       }
   }
-
+  onEnter(e) {
+      if (e.key == 'Enter' && this.state.userMove !='') {
+          this.props.onEnter({userMove: this.state.userMove});// eslint-disable-line react/prop-types
+          this.setState({userMove: ''});
+      }
+  }
   render() {
-      const fieldType = this.props.isHidden ? 'hidden' : 'text';
+      const fieldType = this.props.isHidden ? 'hidden' : 'text';// eslint-disable-line react/prop-types
       return (
- 
       <div className='user-input'>
         <input
             maxLength={1}
@@ -43,5 +39,7 @@ class UserInput extends Component {
     );
   }
 }
-
+UserInput.propTypes = {
+    userMove: PropTypes.string,
+};
 export default UserInput;

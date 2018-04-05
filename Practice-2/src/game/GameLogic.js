@@ -43,7 +43,7 @@ export default class GameLogic {
             }
         }
     }
-    //Get full name w.r.t key e.g 'R'=ROCK
+    // Get full name w.r.t key e.g 'R'=ROCK
     getName(key) {
         if (key == 'R') {
             return 'ROCK';
@@ -54,8 +54,5 @@ export default class GameLogic {
         else if (key == 'S') {
             return 'SCISSORS';
         }
-        
     }
-
 }
-

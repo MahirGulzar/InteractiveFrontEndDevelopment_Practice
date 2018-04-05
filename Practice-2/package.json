@@ -33,7 +33,8 @@
     "build": "webpack --config webpack.config.js",
     "build:watch": "webpack --config webpack.config.js --watch",
     "start": "webpack-dev-server --open --config webpack.config.js",
-    
+    "lint": "eslint src/ test/",
+    "prestart": "yarn lint",
     "test": "mocha",
     "test:watch": "mocha --watch"
   }

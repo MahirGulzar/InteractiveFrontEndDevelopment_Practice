@@ -8,7 +8,7 @@
   "env": {
     "browser": true
   },
-  "plugins": ["react", "import"],
+  "plugins": [ "react", "import" ],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -16,9 +16,15 @@
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-  rules: {
-    "max-len": ["error", 120],
+  "rules": {
+    "max-len": [ "error", 120 ],
     "require-jsdoc": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "linebreak-style": [ "error", "windows" ],
+    "brace-style": [
+      2,
+      "stroustrup",
+      { "allowSingleLine": true }
+    ]
   }
 }
