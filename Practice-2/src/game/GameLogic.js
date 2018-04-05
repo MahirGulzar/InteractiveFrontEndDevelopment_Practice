@@ -3,7 +3,9 @@ export const OUTCOME = {
     TIED: 'TIED',
     LOST: 'LOST'
 };
-
+/*
+    GameLogic holds the core game logic, check user moves and gives Outcomes by user moves
+*/
 export default class GameLogic {
     constructor() {
         this.moves = ['R', 'P', 'S'];

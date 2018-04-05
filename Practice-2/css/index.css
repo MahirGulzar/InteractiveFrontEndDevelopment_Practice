@@ -18,17 +18,29 @@ h1 {
 
 
 
-html, body,.root {
+html, body{
     margin: 0;
     height: 100%;
+
+}
+
+
+#root{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    height:100%;
+
 
 }
 
 .app {
     display: flex; /* establish flex container */
     flex-direction:column;
-    justify-content:center;
+    /*align-content:flex-start;*/
     align-items:center;
+    /*justify-content:center;*/
+    /*flex-wrap:wrap;*/
     
 
 }
