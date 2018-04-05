@@ -1,0 +1,45 @@
+
+
+h1 {
+    font-style: italic;
+}
+
+.lost {
+    color:darkred;
+}
+
+.won {
+    color: green;
+}
+
+.tied {
+    color: orange;
+}
+
+
+
+html, body,.root {
+    margin: 0;
+    height: 100%;
+
+}
+
+.app {
+    display: flex; /* establish flex container */
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+
+}
+
+
+.move-list{
+    display:flex;
+    flex-direction:column-reverse;
+}
+
+
+
+
+
