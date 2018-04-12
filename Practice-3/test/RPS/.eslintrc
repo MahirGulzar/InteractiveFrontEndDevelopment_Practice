@@ -6,16 +6,15 @@
     }
   },
   "env": {
-    "browser": true,
-    "mocha": true,
-    "amd": true
+    "node": true,
+    "mocha": true
   },
   "globals": {
     "expect": true,
     "sinon": true,
-    "global": false,
+    "global": false
   },
-  "plugins": [ "react", "import" ],
+  "plugins": ["react", "import"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -23,10 +22,9 @@
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-  "rules": {
-    "max-len": [ "error", 120 ],
+  rules: {
+    "max-len": ["error", 120],
     "require-jsdoc": "off",
-    "comma-dangle": "off",
-    "linebreak-style": [ "error", "unix" ]
+    "comma-dangle": "off"
   }
 }

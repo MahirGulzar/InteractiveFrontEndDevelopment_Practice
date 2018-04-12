@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import AppHeader from '../components/AppHeader';
+import AppMenu from '../components/AppMenu';
 import GameList from './GameList';
 import RPS from '../RPS/game/RPS';
 import Hangman from '../HangMan/game/Hangman';
@@ -30,7 +30,7 @@ class GameLobby extends Component {
     render() {
         return (
             <div className="app">
-                <AppHeader gameAdd={this.onGameAdd} />
+                <AppMenu gameAdd={this.onGameAdd} />
                 <GameList GameList={this.state.gameList}/>
             </div>
         );

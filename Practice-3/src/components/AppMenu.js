@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class AppHeader extends Component {
+class AppMenu extends Component {
     constructor(props) {
         super(props);
         this.onRPS = this.onRPS.bind(this);
@@ -31,8 +31,8 @@ class AppHeader extends Component {
     }
 }
 
-AppHeader.propTypes = {
+AppMenu.propTypes = {
     gameAdd: PropTypes.func.isRequired,
 };
 
-export default AppHeader;
+export default AppMenu;
