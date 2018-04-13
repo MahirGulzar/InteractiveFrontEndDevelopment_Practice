@@ -20,10 +20,10 @@ class AppMenu extends Component {
         return (
             <div className='app-header'>
                 <h1>Game Lobby</h1>
-                <button onClick={this.onRPS}>
+                <button className='rps-create' onClick={this.onRPS}>
                     Create RPS-Game
                  </button>
-                <button onClick={this.onHangMan}>
+                <button className='hangman-create' onClick={this.onHangMan}>
                     Create Hangman-Game
                  </button>
             </div>

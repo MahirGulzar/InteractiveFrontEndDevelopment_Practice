@@ -15,5 +15,4 @@ describe('RPS MOVE', () => {
           render(<Move guess='ROCK' opposition='SCISSORS' result='WIN' index={1}/>).html()
       ).to.contain('<p>You guessed <i>ROCK</i> which won against <i>SCISSORS</i></p>');
   });
-
 });

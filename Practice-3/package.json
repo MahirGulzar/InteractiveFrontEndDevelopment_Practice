@@ -36,6 +36,7 @@
     "build:watch": "webpack --config webpack.config.js --watch",
     "start": "webpack-dev-server --open --config webpack.config.js",
     "lint": "eslint src/ test/",
+    "pretest": "yarn lint",
     "test": "mocha",
     "test:debug": "mocha --inspect-brk",
     "test:watch": "mocha --watch"
