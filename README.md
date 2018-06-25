@@ -18,7 +18,7 @@ This is a public repository for Interactive Front-end Development practice using
 
 ## Authors
 
-* **Mahir Gulzar** - *Initial work* - [Mahir](https://github.com/mahirgulzar)
+* **Mahir Gulzar** - *mahirgulzar@gmail.com*
 
 ## License
 
